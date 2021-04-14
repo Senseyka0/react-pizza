@@ -14,9 +14,7 @@ export const fetchPizzas = (category, sortBy) => (dispatch) => {
 
    const isAllCategories = category > 0 ? `category=${category}` : "";
 
-   axios
-      .get(`http://localhost:3005/pizzas?${isAllCategories}&_sort=${sortBy}&_order=asc`)
-      .then(({ data }) => {
-         dispatch(setPizzas(data));
-      });
+   axios.get(`/pizzas?${isAllCategories}&_sort=${sortBy}&_order=asc`).then(({ data }) => {
+      dispatch(setPizzas(data));
+   });
 };
