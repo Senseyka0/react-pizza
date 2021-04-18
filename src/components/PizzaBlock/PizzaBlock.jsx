@@ -50,7 +50,7 @@ const PizzaBlock = ({
                      onClick={() => toggleType(type)}
                      key={type}
                   >
-                     {type === 0 ? "тонкое" : "традиционное"}
+                     {type === "тонкое" ? "тонкое" : "традиционное"}
                   </li>
                ))}
             </ul>
